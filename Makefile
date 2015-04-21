@@ -1,8 +1,8 @@
 AutomatedMakefile = am
 CC = g++
 
-FILES = 
-EXECUTABLE = 
+FILES = DrawHeapSkew.o
+EXECUTABLE = Lab13.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
 GTK_PATH = /$(DRIVE_LETTER)/MinGW/GTK
@@ -21,6 +21,7 @@ all: Project
 Project: 		$(FILES)
 			$(LINK) $(EXECUTABLE) $(FILES) $(LIBS)
 
-
+DrawHeapSkew.o:		HeapSkew.h DrawHeapSkew.cpp
+					$(COMPILE) DrawHeapSkew.cpp
 
 
